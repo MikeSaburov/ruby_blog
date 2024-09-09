@@ -2,10 +2,9 @@
 
 <p><%= @article.body %></p>
 
-<ul>
-    <li><%= link_to "Edit", edit_article_path(@article) %></li>
-    <li><%= link_to "Destroy", article_path(@article), data: {
+
+    <button><%= link_to "Редактировать", edit_article_path(@article) %></button>
+    <button><%= link_to "Удалить", article_path(@article), data: {
         turbo_method: :delete,
-        turbo_confirm: "Are you sure?"
-      } %></li>
-</ul>
+        turbo_confirm: "Вы действительно хотите удлить статью?"
+      } %></button>
