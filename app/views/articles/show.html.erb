@@ -8,17 +8,8 @@
 } %></button>
 
 <h2>Комментарии:</h2>
-<% @article.comments.each do |comment| %>
-  <p>
-    <strong>Комментатор:</strong>
-    <%= comment.commenter %>
-  </p>
-
-  <p>
-    <strong>Комментарий:</strong>
-    <%= comment.body %>
-  </p>
-<% end %>
+<hr>
+<%= render @article.comments %>
 
 <h2>Добавить комментарий:</h2>
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
