@@ -23,14 +23,14 @@
 <h2>Добавить комментарий:</h2>
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
   <p>
-    <%= form.label :commenter %><br>
+    <%= form.label :commenter,'Автор комментария'%><br>
     <%= form.text_field :commenter %>
   </p>
   <p>
-    <%= form.label :body%><br>
+    <%= form.label :body, 'Текст комментария'%><br>
     <%= form.text_area :body %>
   </p>
   <p>
-    <%= form.submit%>
+    <%= form.submit 'Добавить'%>
   </p>
 <% end %>
