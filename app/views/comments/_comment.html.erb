@@ -1,4 +1,5 @@
-  <p>
+ <% unless comment.archived? %>
+   <p>
     <strong>Автор:</strong>
     <b><u><%= comment.commenter %></b></u>
   </p>
@@ -8,3 +9,5 @@
     <i><%= comment.body %></i>
   </p>
   <hr>
+ 
+ <%end%> 
